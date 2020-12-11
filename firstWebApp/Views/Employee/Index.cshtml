@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container">
+    <h2>Employees Record</h2>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">Add New Employee</button><br /><br />
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Employee Id
+                </th>
+                <th>
+                    Employee Name
+                </th>
+                @*<th>
+                    Password
+                </th>*@
+                <th>
+                    Salary
+                </th>
+                <th>
+                    TDS
+                </th>
+                <th>
+                    Net Salary
+                </th>
+                <th>
+                    Joining Date
+                </th>
+                <th>
+                    action
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+        </tbody>
+    </table>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">Add Employee</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="EmpName">Employee Name</label>
+                        <input type="text" class="form-control" id="EmpName" placeholder="Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="EmpSalary">Salary</label>
+                        <input type="text" class="form-control" id="EmpSalary" placeholder="Salary" />
+                    </div>
+                    <div class="form-group">
+                        <label for="JoiningDate">Joining Date</label>
+                        <input type="date" class="form-control" id="JoiningDate" placeholder="Joining Date" date-date-format="dd-mm-yyyy" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Add</button>
+                <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="Update();">Update</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/Employee/Index.js"></script>
