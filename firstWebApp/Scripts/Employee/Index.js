@@ -54,7 +54,7 @@ function Add() {
         dataType: "json",
         success: function (result) {
             loadData();
-            $('#myModal').modal('hide');
+            $('#myModal').hide();
         },
         error: function (errormessage) {
             alert(errormessage.responseText);
@@ -79,7 +79,7 @@ function getbyID(EmpId) {
             var dateFormatted = formatDate(result.JoiningDate);
             $('#JoiningDate').val(dateFormatted);
 
-            $('#myModal').modal('show');
+            $('#myModal').show();
             $('#btnUpdate').show();
             $('#btnAdd').hide();
         },

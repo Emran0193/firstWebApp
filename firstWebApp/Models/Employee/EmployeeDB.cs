@@ -50,6 +50,7 @@ namespace firstWebApp.Models.Employee
                 com.Parameters.AddWithValue("@EmpId", "");
                 com.Parameters.AddWithValue("@EmpName", emp.EmpName);
                 com.Parameters.AddWithValue("@EmpSalary", emp.EmpSalary);
+                com.Parameters.AddWithValue("@Password", Common.Crypto.EncryptData("123456", "FirstWebApp#123456"));
                 com.Parameters.AddWithValue("@TDS", emp.TDS);
                 com.Parameters.AddWithValue("@NetSalary", emp.NetSalary);
                 com.Parameters.AddWithValue("@JoiningDate", emp.JoiningDate);
@@ -71,6 +72,7 @@ namespace firstWebApp.Models.Employee
                 com.Parameters.AddWithValue("@EmpId", emp.EmpId);
                 com.Parameters.AddWithValue("@EmpName", emp.EmpName);
                 com.Parameters.AddWithValue("@EmpSalary", emp.EmpSalary);
+                com.Parameters.AddWithValue("@Password", Common.Crypto.EncryptData("123456", "FirstWebApp#123456"));
                 com.Parameters.AddWithValue("@TDS", emp.TDS);
                 com.Parameters.AddWithValue("@NetSalary", emp.NetSalary);
                 com.Parameters.AddWithValue("@JoiningDate", emp.JoiningDate);
